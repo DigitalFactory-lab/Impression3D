@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171918">
+  <title>Couche par couche · L’atelier impression 3D</title>
+  <meta name="description" content="120 minutes pour partir d’un problème métier, comprendre l’impression 3D et fabriquer ton premier objet utile.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ff5b2d'/%3E%3Cpath d='m6 11 10-5 10 5-10 5zM6 17l10 5 10-5M6 23l10 5 10-5' fill='none' stroke='%23171918' stroke-width='2.5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css"><script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#stage">Aller à l’atelier</a>
+  <header class="topbar">
+    <button class="brand" id="home" aria-label="Retour au premier écran"><span class="brandmark" aria-hidden="true">≋</span><span>COUCHE<br>PAR COUCHE<span class="brand-sub">L’ATELIER IMPRESSION 3D</span></span></button>
+    <div class="toptools"><button class="quiet" id="guide">Guide animateur</button><button class="clock" id="clock" title="Démarrer ou mettre en pause le chrono de l’atelier">▷ <span id="clock-text">Démarrer</span></button></div>
+  </header>
+  <div class="progress-track" aria-hidden="true"><div id="progress"></div></div>
+  <main id="stage" tabindex="-1"></main>
+  <footer class="bottom"><div class="chapter"><span id="page-number">01 / 09</span><span id="chapter-name">Le déclic</span></div><div id="dots" class="dots" aria-label="Étapes de l’atelier"></div><div class="nav-actions"><button id="prev" class="nav-arrow" aria-label="Écran précédent">←</button><button id="next" class="next">Les usages métiers <span aria-hidden="true">→</span></button></div></footer>
+  <div class="institutional-logos" aria-label="Digital Factory et pouvoirs subsidiants"><img class="digital-factory-logo" src="assets/logo-digital-factory.png" alt="Digital Factory by Le Forem" width="813" height="187"><img class="subsidy-logos" src="assets/logo-pouvoirs-subsidiants.jpg" alt="En Mieux, Union européenne — cofinancé par l’Union européenne, et Wallonie" width="1413" height="424"></div>
+  <dialog id="modal"><div class="modal-top"><span class="eyebrow" id="modal-kicker">L’ATELIER</span><button id="close-modal" class="nav-arrow" aria-label="Fermer la fenêtre">×</button></div><div id="modal-body"></div></dialog>
+  <div id="announcement" class="sr-only" aria-live="polite"></div>
+  <noscript><p>Active JavaScript pour explorer les objets et naviguer dans l’atelier.</p></noscript>
+</body></html>
