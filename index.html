@@ -8,10 +8,27 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css"><script type="module" src="app.js"></script>
 </head>
-<body>
+<body class="intro-active">
+  <section class="intro-screen" aria-labelledby="intro-title">
+    <p class="intro-brand">COUCHE PAR COUCHE</p>
+    <div class="intro-content">
+      <h1 class="intro-title" id="intro-title" tabindex="-1">Tout commence<br>par une <span>idée.</span></h1>
+      <svg class="intro-layers" viewBox="0 0 1200 230" fill="none" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path pathLength="1" d="M2 105H380C620 105 655 18 795 18S935 125 1198 125"/>
+          <path pathLength="1" d="M2 127H380C620 127 655 50 795 50S935 147 1198 147"/>
+          <path pathLength="1" d="M2 149H380C620 149 655 82 795 82S935 169 1198 169"/>
+          <path pathLength="1" d="M2 171H380C620 171 655 114 795 114S935 191 1198 191"/>
+          <path pathLength="1" d="M2 193H380C620 193 655 146 795 146S935 213 1198 213"/>
+          <path pathLength="1" d="M2 215H380C620 215 655 178 795 178S935 229 1198 229"/>
+        </g>
+      </svg>
+    </div>
+    <button class="intro-enter" id="enter-workshop">Entrer dans l’atelier <span aria-hidden="true">→</span></button>
+  </section>
   <a class="skip" href="#stage">Aller à l’atelier</a>
   <header class="topbar">
-    <button class="brand" id="home" aria-label="Retour au premier écran"><span class="brandmark" aria-hidden="true">≋</span><span>COUCHE<br>PAR COUCHE<span class="brand-sub">L’ATELIER IMPRESSION 3D</span></span></button>
+    <button class="brand" id="home" aria-label="Retour à l’introduction"><span class="brandmark" aria-hidden="true">≋</span><span>COUCHE<br>PAR COUCHE<span class="brand-sub">L’ATELIER IMPRESSION 3D</span></span></button>
     <div class="toptools"><button class="quiet" id="guide">Guide animateur</button><button class="clock" id="clock" title="Démarrer ou mettre en pause le chrono de l’atelier">▷ <span id="clock-text">Démarrer</span></button></div>
   </header>
   <div class="progress-track" aria-hidden="true"><div id="progress"></div></div>
