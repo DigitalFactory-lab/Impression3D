@@ -157,7 +157,7 @@ body{min-height:100svh;display:flex;flex-direction:column}
 
 /* Keep image-led screens within a normal presentation viewport. */
 @media(min-width:751px){
-  .scenario-visual img{height:min(46svh,540px);aspect-ratio:auto;object-fit:cover}
+  .scenario-visual img{height:min(46svh,540px);aspect-ratio:auto;object-fit:contain}
   .case-photo img{height:min(39svh,360px);aspect-ratio:auto}
   .case-carousel .construction-slide{object-fit:contain}
   .process-reference img{height:min(39svh,340px);aspect-ratio:auto}
