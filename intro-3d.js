@@ -1,0 +1,9 @@
+const canvas=document.createElement('canvas');
+canvas.className='intro-relief-3d';
+canvas.setAttribute('aria-hidden','true');
+const host=document.querySelector('.intro-content');
+if(host){host.appendChild(canvas);const ctx=canvas.getContext('2d',{alpha:true});let start=performance.now(),paused=false,pauseAt=0,totalPause=0;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function resize(){const d=Math.min(devicePixelRatio||1,2),r=host.getBoundingClientRect();canvas.width=Math.max(1,Math.round(r.width*d));canvas.height=Math.max(1,Math.round(r.height*d));canvas.style.width=r.width+'px';canvas.style.height=r.height+'px';ctx.setTransform(d,0,0,d,0,0)}
+function shape(u){return Math.pow(Math.max(0,1-u*u),.56)}
+function draw(now){if(paused)return;const w=canvas.clientWidth,h=canvas.clientHeight,t=reduced?12:(now-start-totalPause)/1000,build=Math.min(1,t/3.8),rot=reduced?.45:t*.12;ctx.clearRect(0,0,w,h);const cx=w*.73,cy=h*.53,scale=Math.min(w,h)*.34,layers=46,visible=Math.max(1,Math.floor(layers*build));ctx.save();ctx.translate(cx,cy);ctx.rotate(-.08);for(let i=0;i<visible;i++){const z=i/(layers-1),yy=(z-.5)*scale*1.05,rad=scale*(.24+.58*Math.sin(Math.PI*(.08+z*.84)));const squash=.36+.10*Math.sin(rot),shift=Math.sin(rot)*scale*.12*(z-.45);ctx.beginPath();for(let k=0;k<=64;k++){const u=k/64*2-1,x=shift+u*rad,y=yy+shape(u)*rad*squash*Math.cos(rot)*.34;if(k===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)}ctx.strokeStyle=`rgba(255,91,45,${.17+.63*z})`;ctx.lineWidth=1.15;ctx.stroke()}ctx.restore();if(!reduced)requestAnimationFrame(draw)}
+resize();addEventListener('resize',resize,{passive:true});requestAnimationFrame(draw);canvas.addEventListener('click',()=>{if(paused){totalPause+=performance.now()-pauseAt;paused=false;requestAnimationFrame(draw)}else{paused=true;pauseAt=performance.now()}canvas.classList.toggle('is-paused',paused)});}
