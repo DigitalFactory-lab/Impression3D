@@ -182,3 +182,8 @@ body{min-height:100svh;display:flex;flex-direction:column}
   .closing-card{min-height:360px}
   .closing-card li{padding:10px 0}
 }
+
+/* Exemples complémentaires : visibles avant les questions, au second plan. */
+.case-applications{margin:17px 0 20px;padding-left:12px;border-left:2px solid var(--orange);font-size:14px;line-height:1.5;color:var(--muted)}
+.case-applications strong{display:block;margin-bottom:4px;font-size:12px;font-weight:700;color:#4c544f}
+.case-applications span{display:block}
