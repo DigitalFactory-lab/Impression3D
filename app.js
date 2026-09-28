@@ -23,11 +23,101 @@ const scenarios=[
  {title:'Une idée.<br>Un doute.<br><span class="orange">Un prototype.</span>',text:'Un support vient d’être imprimé. Le téléphone est encore posé à côté.',ask:'À quoi ferais-tu attention en essayant cet objet ?',photo:'Tester.<br>Du dessin à l’usage.',image:'support-telephone.jpeg',alt:'Un support de téléphone blanc imprimé, posé près de son croquis. Le téléphone est à plat à côté, prêt pour un essai.'}
 ];
 const sectors=[
- {name:'Construction',starter:'Regarde cette maison. Qu’est-ce qui te montre qu’elle n’a pas été construite comme les autres ?',image:'construction-beckum.jpg',alt:'Maison de deux étages aux murs courbes et aux lignes de couches visibles, construite par PERI à Beckum en Allemagne.',credit:'Photo : PERI 3D Construction · Beckum, 2020',source:'peri',qa:[['On imprime','Quelle partie de la maison l’imprimante a-t-elle fabriquée ?','Les murs en béton, déposés couche après couche.'],['Pourquoi','Regarde les angles de la maison. Qu’est-ce que la machine permet de faire ?','Elle suit le dessin pour former des murs arrondis.'],['Ça change','Où ces murs prennent-ils forme ?','Sur le chantier. Certains autres éléments de cette maison ont été fabriqués séparément.'],['À vérifier','Une fois les murs imprimés, la maison est-elle prête à habiter ?','Non. Les autres travaux et les vérifications du bâtiment restent nécessaires.']]},
- {name:'Industrie',starter:'Dans cette usine, un robot manipule des portes de voiture. Quelle pièce a-t-on imprimée pour l’aider ?',image:'industrie.jpg',alt:'Pince de robot imprimée en 3D dans l’usine BMW de Regensburg, utilisée pour manipuler des portes de voiture.',credit:'Photo : BMW Group',source:'bmw',qa:[['On imprime','Quelle partie du robot est imprimée ?','Sa pince, conçue pour saisir les portes. Pas le robot entier.'],['Pourquoi','Pourquoi fabriquer une pince adaptée aux portes ?','Pour les saisir au bon endroit, avec une structure plus légère.'],['Ça change','Que gagne le robot avec cette nouvelle pince ?','Selon BMW, elle est plus légère et plus rigide pour manipuler les portes.'],['À vérifier','Que tester avant de la laisser soulever des portes ?','La prise, la rigidité et la tenue de la pince.']]},
- {name:'Maintenance',starter:'L’embout de ce luminaire de train n’existe plus en stock. À gauche, la pièce refaite ; à droite, l’ancienne. Que faut-il conserver ?',image:'maintenance.jpg',alt:'Deux embouts d’un luminaire de locomotive Class 43 côte à côte : la nouvelle pièce imprimée blanche à gauche et l’ancienne pièce grise à droite.',credit:'Photo : DB ESG · blanc : pièce refaite / gris : pièce d’origine',source:'dbesg',qa:[['On imprime','Quelle partie du luminaire a été refaite ?','Le petit embout blanc qui remplace l’ancien embout gris.'],['Pourquoi','Pourquoi ne pas simplement commander la pièce ?','Cet embout n’était plus fabriqué et le stock était presque épuisé.'],['Ça change','Que doit garder la nouvelle pièce pour pouvoir remplacer l’ancienne ?','Sa forme utile, son trou de fixation et son bon ajustement au luminaire.'],['À vérifier','Que faut-il essayer avant d’en fabriquer plusieurs ?','DB ESG a vérifié que l’embout s’ajustait et remplissait sa fonction.']]},
- {name:'Santé',starter:'Un chirurgien a les images du rein de son patient. Pourquoi voudrait-il aussi en tenir une copie dans ses mains avant d’opérer la tumeur ?',image:'sante.jpg',alt:'Modèle anatomique imprimé d’un rein avec tumeur et vaisseaux, publié dans un travail scientifique antérieur de la même équipe.',credit:'Photo : Gómez Ciriza et coll., 2019 · autre travail de l’équipe',source:'rivero',qa:[['On imprime','Est-ce un rein destiné à être implanté ?','Non. C’est une copie du rein du patient pour préparer l’opération.'],['Pourquoi','Que peut-on mieux comprendre en le tournant dans ses mains ?','La forme du rein et la position de la tumeur par rapport aux vaisseaux.'],['Ça change','Avant d’opérer, comment cette copie pourrait-elle aider à préparer le geste ?','Elle peut aider l’équipe à repérer la tumeur et les vaisseaux, puis à discuter du geste à réaliser.'],['À vérifier','Qu’est-ce qu’une copie imprimée ne peut pas remplacer pendant l’opération ?','Les images médicales, l’examen du patient et les vérifications du chirurgien pendant l’intervention.']]},
- {name:'Design',starter:'Une chaussure pleine de trous. Un défaut ou un choix ?',image:'design.jpg',alt:'Chaussure Adidas Climacool à structure ajourée imprimée en 3D.',credit:'Photo : adidas',source:'adidas',qa:[['On imprime','Quelle partie de la chaussure est imprimée ?','Ici, c’est toute la chaussure.'],['Pourquoi','À quoi servent tous ces espaces dans la matière ?','À laisser passer l’air autour du pied.'],['Ça change','Le designer choisit-il seulement son apparence ?','Non. La forme joue aussi sur la manière dont la chaussure se porte.'],['À vérifier','Elle a une forme originale : est-ce suffisant pour la porter ?','Il faut aussi essayer la taille, le confort et sa tenue à l’usage.']]}
+  {
+    "name": "Construction",
+    "starter": "Observe les deux photos : une maison imprimée en 3D et le dépôt des couches sur un chantier.",
+    "image": "construction-beckum.jpg",
+    "alt": "Maison de deux étages aux murs courbes et aux lignes de couches visibles, construite par PERI à Beckum en Allemagne.",
+    "credit": "Photo : PERI 3D Construction · Beckum, 2020",
+    "source": "peri",
+    "qa": [
+      [
+        "",
+        "En regardant ces photos, qu’est-ce que tu comprends du travail de la machine ?",
+        "La machine dépose de la matière couche après couche pour former les murs. Elle suit un trajet préparé à partir d’un modèle numérique."
+      ],
+      [
+        "",
+        "Sur ce chantier, quel serait le rôle des personnes qui travaillent avec elle ?",
+        "Préparer le chantier et la machine, surveiller l’impression et vérifier le résultat. Les équipes réalisent aussi les autres travaux nécessaires pour terminer le bâtiment."
+      ]
+    ],
+    "applications": "Maquettes de bâtiments · Éléments de façade · Coffrages pour réaliser des formes particulières"
+  },
+  {
+    "name": "Industrie",
+    "starter": "Cette pince imprimée en 3D permet à un robot de déplacer des portes de voiture.",
+    "image": "industrie.jpg",
+    "alt": "Pince de robot imprimée en 3D dans l’usine BMW de Regensburg, utilisée pour manipuler des portes de voiture.",
+    "credit": "Photo : BMW Group",
+    "source": "bmw",
+    "qa": [
+      [
+        "",
+        "Pourquoi l’usine aurait-elle choisi d’imprimer cette pince ?",
+        "Pour fabriquer une forme adaptée à cette tâche. Dans cet exemple, la nouvelle pince est plus légère et plus rigide."
+      ],
+      [
+        "",
+        "Si l’usine change de modèle de porte, qu’est-ce que l’impression 3D pourrait lui permettre de faire ?",
+        "Modifier le modèle numérique, puis fabriquer et tester une pince adaptée à la nouvelle porte."
+      ]
+    ],
+    "applications": "Prototypes de produits · Outils pour faciliter l’assemblage · Gabarits pour positionner ou percer une pièce"
+  },
+  {
+    "name": "Maintenance",
+    "starter": "L’embout d’un luminaire de train n’est plus fabriqué. Sur la photo, tu vois l’ancienne pièce et celle reproduite par impression 3D.",
+    "image": "maintenance.jpg",
+    "alt": "Deux embouts d’un luminaire de locomotive Class 43 côte à côte : la nouvelle pièce imprimée blanche à gauche et l’ancienne pièce grise à droite.",
+    "credit": "Photo : DB ESG · blanc : pièce refaite / gris : pièce d’origine",
+    "source": "dbesg",
+    "qa": [
+      [
+        "",
+        "Qu’est-ce que la possibilité de refaire cette petite pièce change pour l’entretien du train ?",
+        "Elle permet de réparer le luminaire et de continuer à l’utiliser, sans devoir remplacer tout l’ensemble faute de pièce disponible."
+      ],
+      [
+        "",
+        "Que faudrait-il vérifier avant d’installer la pièce imprimée ?",
+        "Qu’elle se fixe correctement, maintient les éléments prévus et convient aux conditions d’utilisation dans le train."
+      ]
+    ],
+    "applications": "Boutons de commande introuvables · Clips et caches de remplacement · Poignées adaptées à un équipement"
+  },
+  {
+    "name": "Santé",
+    "starter": "Le chirurgien dispose des images du rein de son patient, sur lequel se trouve une tumeur. Il fait aussi fabriquer une copie imprimée en 3D.",
+    "image": "sante.jpg",
+    "alt": "Modèle anatomique imprimé d’un rein avec tumeur et vaisseaux, publié dans un travail scientifique antérieur de la même équipe.",
+    "credit": "Photo : Gómez Ciriza et coll., 2019 · autre travail de l’équipe",
+    "source": "rivero",
+    "qa": [
+      [
+        "",
+        "À quoi cette copie pourrait-elle lui servir avant l’opération ?",
+        "À observer le rein sous différents angles, repérer la position de la tumeur par rapport aux vaisseaux et préparer son geste avec l’équipe."
+      ]
+    ],
+    "applications": "Prothèses dentaires · Orthèses sur mesure pour soutenir un membre · Modèles anatomiques pour la formation"
+  },
+  {
+    "name": "Design",
+    "starter": "Cette chaussure Adidas est entièrement imprimée en 3D et commercialisée pour être portée.",
+    "image": "design.jpg",
+    "alt": "Chaussure Adidas Climacool à structure ajourée imprimée en 3D.",
+    "credit": "Photo : adidas",
+    "source": "adidas",
+    "qa": [
+      [
+        "",
+        "Quelle matière choisirais-tu pour fabriquer cette chaussure ? Pourquoi ?",
+        "Une matière qui puisse se déformer pour accompagner le pied et résister à un usage répété. Sa tenue à l’usure et son confort doivent ensuite être testés."
+      ]
+    ],
+    "applications": "Bijoux · Luminaires · Montures de lunettes"
+  }
 ];
 const objects={
  'porte-cable':{name:'Le porte-câble',goal:'Tes câbles à portée de main.',number:'1332773',image:'choix-porte-cable.png',alt:'Porte-câble imprimé en 3D, aux ouvertures arrondies, reprenant la pièce de la page précédente.',question:'Tes câbles passent-ils dans les ouvertures ? Que faut-il vérifier pour qu’ils tiennent ?',file:null},
@@ -58,7 +148,7 @@ const constructionPhotos=[
  {image:'construction-depot.jpeg',alt:'Gros plan d’une tête d’impression déposant de la matière sur un mur courbe. Les couches superposées sont nettement visibles.',label:'Le dépôt des couches',credit:'Photo fournie · dépôt couche par couche'}
 ];
 function casePhotoHTML(c){if(state.sector!==0)return `<figure class="case-photo"><img src="assets/${c.image}" alt="${escape(c.alt)}"><figcaption><span>${c.credit}</span><span>0${state.sector+1} / 05</span></figcaption></figure>`;const index=state.constructionPhoto===1?1:0;const p=constructionPhotos[index];return `<div class="case-carousel" role="region" aria-roledescription="carrousel" aria-label="Photos de construction imprimée"><figure class="case-photo"><img class="construction-slide" src="assets/${p.image}" alt="${escape(p.alt)}"><figcaption><span>${p.credit}</span><span aria-live="polite">${index+1} / 2</span></figcaption></figure><div class="construction-controls"><button class="nav-arrow" data-construction="prev" aria-label="Photo précédente">←</button><div class="construction-tabs">${constructionPhotos.map((photo,i)=>`<button data-construction="${i}" aria-pressed="${index===i}">${photo.label}</button>`).join('')}</div><button class="nav-arrow" data-construction="next" aria-label="Photo suivante">→</button></div></div>`;}
-function screen1(){const c=sectors[state.sector];return `${kicker(1)}<div class="section-head"><h2>Ça sert à quoi,<br><span class="orange">dans la vraie vie ?</span></h2><p class="lede">Choisis un domaine.<br>Observe, propose, puis vérifie.</p></div><div class="tabbar">${sectors.map((s,i)=>`<button class="tab" data-sector="${i}" aria-pressed="${state.sector===i}">${s.name}</button>`).join('')}</div><div class="case-layout"><div>${casePhotoHTML(c)}${state.sector===2?`<div class="luminaire-context"><svg viewBox="0 0 560 105" role="img" aria-label="Schéma de principe d’un luminaire fluorescent allongé avec un embout à son extrémité droite."><rect x="26" y="29" width="425" height="51" rx="9" fill="#dce1dc" stroke="#6f7771" stroke-width="3"/><rect x="49" y="39" width="384" height="31" rx="7" fill="#f7f5de"/><rect x="451" y="25" width="45" height="59" rx="7" fill="#ff5b2d"/><path d="M520 18 L486 31" stroke="#ff5b2d" stroke-width="3"/><text x="312" y="101" font-size="15" fill="#3f4841">luminaire</text><text x="465" y="17" font-size="15" fill="#3f4841">embout</text></svg><p>La pièce se place à l’extrémité d’un luminaire fluorescent. Schéma de principe : le modèle exact n’est pas identifié.</p></div>`:''}</div><div class="case-panel"><span class="case-domain">${c.name.toUpperCase()} · CAS RÉEL</span><h3>${c.starter}</h3><p class="case-hint">Propose ta réponse, puis touche une question.</p><div class="case-questions">${c.qa.map(([,question,answer],i)=>{const revealed=!!state.sectorReveal?.[`${state.sector}-${i}`];return `<button class="case-question" data-case="${i}" aria-expanded="${revealed}"><span class="case-question-top"><strong>${question}</strong><span aria-hidden="true">${revealed?'−':'+'}</span></span>${revealed?`<span class="case-question-body case-answer">${answer}</span>`:''}</button>`;}).join('')}</div><button class="text-link" data-source="${c.source}">Voir la source du cas ↗</button><p class="micro muted">Touche une question pour afficher ou masquer la réponse.</p></div></div>`;}
+function screen1(){const c=sectors[state.sector];return `${kicker(1)}<div class="section-head"><h2>Ça sert à quoi,<br><span class="orange">dans la vraie vie ?</span></h2><p class="lede">Choisis un domaine.<br>Observe, propose, puis vérifie.</p></div><div class="tabbar">${sectors.map((s,i)=>`<button class="tab" data-sector="${i}" aria-pressed="${state.sector===i}">${s.name}</button>`).join('')}</div><div class="case-layout"><div>${casePhotoHTML(c)}${state.sector===2?`<div class="luminaire-context"><svg viewBox="0 0 560 105" role="img" aria-label="Schéma de principe d’un luminaire fluorescent allongé avec un embout à son extrémité droite."><rect x="26" y="29" width="425" height="51" rx="9" fill="#dce1dc" stroke="#6f7771" stroke-width="3"/><rect x="49" y="39" width="384" height="31" rx="7" fill="#f7f5de"/><rect x="451" y="25" width="45" height="59" rx="7" fill="#ff5b2d"/><path d="M520 18 L486 31" stroke="#ff5b2d" stroke-width="3"/><text x="312" y="101" font-size="15" fill="#3f4841">luminaire</text><text x="465" y="17" font-size="15" fill="#3f4841">embout</text></svg><p>La pièce se place à l’extrémité d’un luminaire fluorescent. Schéma de principe : le modèle exact n’est pas identifié.</p></div>`:''}</div><div class="case-panel"><span class="case-domain">${c.name.toUpperCase()} · CAS RÉEL</span><h3>${c.starter}</h3><p class="case-applications"><strong>D’autres usages dans ce secteur</strong><span>${c.applications}</span></p><p class="case-hint">Propose ta réponse, puis touche une question.</p><div class="case-questions">${c.qa.map(([,question,answer],i)=>{const revealed=!!state.sectorReveal?.[`v2-${state.sector}-${i}`];return `<button class="case-question" data-case="${i}" aria-expanded="${revealed}"><span class="case-question-top"><strong>${question}</strong><span aria-hidden="true">${revealed?'−':'+'}</span></span>${revealed?`<span class="case-question-body case-answer">${answer}</span>`:''}</button>`;}).join('')}</div><button class="text-link" data-source="${c.source}">Voir la source du cas ↗</button><p class="micro muted">Touche une question pour afficher ou masquer la réponse.</p></div></div>`;}
 const process=[
  ['Le modèle 3D','Avant l’objet, il y a sa forme dans un fichier. Tu peux créer ce modèle, le modifier ou en récupérer un.','Le fichier décrit la forme et les dimensions.','Qu’est-ce que tu voudrais mesurer sur cette pièce ?'],
  ['La préparation','Le logiciel découpe la forme en couches et prépare les déplacements de la buse. Tu règles la position, la matière et la machine.','Après le choix de matière, tu revérifies les réglages et la durée du plateau complet.','Avant de lancer, comment savoir si tout sera fini à temps ?'],
@@ -97,7 +187,7 @@ function bind(){
  $$('[data-construction]').forEach(b=>b.onclick=()=>{const value=b.dataset.construction;state.constructionPhoto=/^[01]$/.test(value)?Number(value):state.constructionPhoto===1?0:1;render().then(()=>$(`[data-construction="${value}"]`)?.focus({preventScroll:true}));});
  $('.case-carousel')?.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();e.stopPropagation();$(`[data-construction="${e.key==='ArrowLeft'?'prev':'next'}"]`)?.click();}});
 
- $$('[data-scenario]').forEach(b=>b.onclick=()=>{state.scenario=+b.dataset.scenario;render();});$$('[data-sector]').forEach(b=>b.onclick=()=>{state.sector=+b.dataset.sector;render();});$$('[data-case]').forEach(b=>b.onclick=()=>{const i=+b.dataset.case,key=`${state.sector}-${i}`;state.sectorReveal={...state.sectorReveal,[key]:state.sectorReveal?.[key]?0:1};render().then(()=>{const next=$(`[data-case="${i}"]`);next?.focus({preventScroll:true});});});$$('[data-process]').forEach(b=>b.onclick=()=>{state.process=+b.dataset.process;render().then(()=>$(`[data-process="${state.process}"]`)?.focus({preventScroll:true}));});$$('[data-material]').forEach(b=>b.onclick=()=>{state.material=b.dataset.material;render().then(()=>$(`[data-material="${state.material}"]`)?.focus({preventScroll:true}));});$$('[data-object]').forEach(b=>b.onclick=()=>{state.object=b.dataset.object;render().then(()=>$(`[data-object="${state.object}"]`)?.focus({preventScroll:true}));});
+ $$('[data-scenario]').forEach(b=>b.onclick=()=>{state.scenario=+b.dataset.scenario;render();});$$('[data-sector]').forEach(b=>b.onclick=()=>{state.sector=+b.dataset.sector;render();});$$('[data-case]').forEach(b=>b.onclick=()=>{const i=+b.dataset.case,key=`v2-${state.sector}-${i}`;state.sectorReveal={...state.sectorReveal,[key]:state.sectorReveal?.[key]?0:1};render().then(()=>{const next=$(`[data-case="${i}"]`);next?.focus({preventScroll:true});});});$$('[data-process]').forEach(b=>b.onclick=()=>{state.process=+b.dataset.process;render().then(()=>$(`[data-process="${state.process}"]`)?.focus({preventScroll:true}));});$$('[data-material]').forEach(b=>b.onclick=()=>{state.material=b.dataset.material;render().then(()=>$(`[data-material="${state.material}"]`)?.focus({preventScroll:true}));});$$('[data-object]').forEach(b=>b.onclick=()=>{state.object=b.dataset.object;render().then(()=>$(`[data-object="${state.object}"]`)?.focus({preventScroll:true}));});
  $$('[data-go]').forEach(b=>b.onclick=()=>go(+b.dataset.go));$$('[data-source]').forEach(b=>b.onclick=()=>showSources(b.dataset.source));
  $$('[data-view]').forEach(b=>b.onclick=()=>b.dataset.view==='rotate'?viewer?.rotate():viewer?.zoom(b.dataset.view==='in'?.15:-.15));
  $('#layers')?.addEventListener('input',e=>{stopLayerAnimation();state.layer=+e.target.value;updateLayerDemo();save();});
