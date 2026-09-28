@@ -155,16 +155,6 @@ body{min-height:100svh;display:flex;flex-direction:column}
 #stage{flex:1 0 auto;min-height:0}
 .topbar,.progress-track,.bottom,.institutional-logos{flex-shrink:0}
 
-/* Keep image-led screens within a normal presentation viewport. */
-@media(min-width:751px){
-  .scenario-visual img{height:min(46svh,540px);aspect-ratio:auto;object-fit:contain}
-  .case-photo img{height:min(39svh,360px);aspect-ratio:auto}
-  .case-carousel .construction-slide{object-fit:contain}
-  .process-reference img{height:min(39svh,340px);aspect-ratio:auto}
-  .print-choice-photo img{height:min(31svh,300px);aspect-ratio:auto}
-  .first-layers-photo img{height:min(42svh,370px);aspect-ratio:auto}
-}
-
 @media(min-width:751px) and (max-height:820px){
   .topbar{height:72px;padding-top:10px;padding-bottom:10px}
   #stage{padding-top:18px;padding-bottom:18px}
