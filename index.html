@@ -6,16 +6,13 @@
   <title>Couche par couche · L’atelier impression 3D</title>
   <meta name="description" content="120 minutes pour partir d’un problème métier, comprendre l’impression 3D et fabriquer ton premier objet utile.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="style.css?v=0847ea4b5011"><script type="module" src="app.js?v=038ede96d2e3"></script>
-  <script type="module" src="intro-relief.js?v=1861edc87257"></script>
+  <link rel="stylesheet" href="style.css?v=2fb629d965c9"><script type="module" src="app.js?v=038ede96d2e3"></script>
 </head>
 <body class="intro-active">
   <section class="intro-screen" aria-labelledby="intro-title">
     <p class="intro-brand">COUCHE PAR COUCHE</p>
     <div class="intro-content">
       <h1 class="intro-title" id="intro-title" tabindex="-1">Tout commence<br>par une <span>idée.</span></h1>
-      <div class="intro-relief">
-      <canvas class="intro-relief-canvas" id="intro-relief-canvas" aria-hidden="true"></canvas>
       <svg class="intro-layers" viewBox="0 0 1200 230" fill="none" aria-hidden="true">
         <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
           <path pathLength="1" d="M2 105H380C620 105 655 18 795 18S935 125 1198 125"/>
@@ -26,8 +23,6 @@
           <path pathLength="1" d="M2 215H380C620 215 655 178 795 178S935 229 1198 229"/>
         </g>
       </svg>
-      <button class="intro-motion" id="intro-motion" aria-label="Mettre l’animation en pause" title="Mettre l’animation en pause" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path class="motion-pause" d="M7 5h3v14H7zm7 0h3v14h-3z"/><path class="motion-play" d="m8 5 11 7-11 7z"/></svg></button>
-      </div>
     </div>
     <button class="intro-enter" id="enter-workshop">Entrer dans l’atelier <span aria-hidden="true">→</span></button>
   </section>
