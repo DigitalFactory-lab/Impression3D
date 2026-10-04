@@ -121,7 +121,7 @@ const sectors=[
 ];
 const objects={
  'porte-cable':{name:'Le porte-câble',goal:'Tes câbles à portée de main.',number:'1332773',image:'choix-porte-cable.png',alt:'Porte-câble imprimé en 3D, aux ouvertures arrondies, reprenant la pièce de la page précédente.',question:'Tes câbles passent-ils dans les ouvertures ? Que faut-il vérifier pour qu’ils tiennent ?',file:null},
- 'porte-gsm':{name:'Le porte-GSM',goal:'Un support qui suit tes clés.',number:'1370706',image:'choix-porte-gsm-pliant.png',alt:'Porte-GSM pliant noir et orange : replié avec un trousseau de clés au premier plan, et déplié pour soutenir un téléphone derrière.',question:'Ton GSM tient-il avec sa coque ? Comment vérifier la stabilité et l’angle de l’écran ?',file:null}
+ 'porte-gsm':{name:'Le porte-GSM',goal:'Un support qui suit tes clés.',number:'1370706',image:'choix-porte-gsm-photo.webp',alt:'Porte-GSM pliant noir et orange, déplié et photographié seul sur un fond clair.',question:'Ton GSM tient-il avec sa coque ? Comment vérifier la stabilité et l’angle de l’écran ?',file:null}
 };
 if(!objects[state.object])state.object='porte-cable';
 const sources={
